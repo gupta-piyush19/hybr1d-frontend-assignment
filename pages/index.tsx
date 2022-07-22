@@ -1,7 +1,14 @@
 import type { NextPage } from "next";
+import Head from "next/head";
 
 const Home: NextPage = () => {
-  return <div>test</div>;
+  return (
+    <>
+      <Head>
+        <title>Hybr1d Assignment</title>
+      </Head>
+    </>
+  );
 };
 
 export default Home;
