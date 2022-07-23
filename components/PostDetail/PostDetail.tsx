@@ -1,10 +1,11 @@
+import Comments from "components/Comments";
 import { format, parseISO } from "date-fns";
 import React from "react";
 import * as S from "./PostDetail.style";
 
 const PostDetail = (props: { post: IPostDetail }) => {
   const { post } = props;
-  console.log(post);
+
   return (
     <S.PostDetail>
       <S.PostDetailContainer>
@@ -23,11 +24,16 @@ const PostDetail = (props: { post: IPostDetail }) => {
             <p>|</p>
             <div className="post-date">
               <span>Posted on: </span>
-              <p>{format(parseISO(post?.created_at ?? ""), "MMM dd, yyyy")}</p>
+              <p>{format(parseISO(post?.created_at!), "MMM dd, yyyy")}</p>
             </div>
           </div>
         </S.PostInfo>
-        <S.PostComments></S.PostComments>
+        <S.PostComments>
+          <p className="heading">Comments({post?.children?.length})</p>
+          <div className="comments-container">
+            <Comments comments={post?.children} />
+          </div>
+        </S.PostComments>
       </S.PostDetailContainer>
     </S.PostDetail>
   );

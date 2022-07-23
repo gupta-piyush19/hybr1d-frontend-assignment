@@ -8,8 +8,7 @@ export const PostDetailContainer = styled.div``;
 export const PostInfo = styled.div`
   padding: 12px;
   border-bottom: 1px solid #ccc;
-  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  margin-bottom: 40px;
+
   .title {
     p {
       font-size: 32px;
@@ -46,4 +45,12 @@ export const PostInfo = styled.div`
     }
   }
 `;
-export const PostComments = styled.div``;
+export const PostComments = styled.div`
+  padding: 0 12px 12px 12px;
+  margin-top: 24px;
+  .heading {
+    font-weight: 500;
+    font-size: 18px;
+    color: #555;
+  }
+`;

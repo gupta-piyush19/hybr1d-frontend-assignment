@@ -10,7 +10,7 @@ interface IPostDetail {
   points?: number;
   parent_id?: number;
   story_id?: number;
-  children?: IPostDetail[] | [];
+  children?: IPostDetail[];
   options?: [];
 }
 
