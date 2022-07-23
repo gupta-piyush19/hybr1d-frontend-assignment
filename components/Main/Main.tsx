@@ -27,6 +27,7 @@ const Main = () => {
       {posts?.map((post) => (
         <div key={post.ObjectID}>{post.title}</div>
       ))}
+      test
     </div>
   );
 };
