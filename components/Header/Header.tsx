@@ -6,8 +6,21 @@ import Link from "next/link";
 import CompanyLogo from "static/media/HybridLogo.svg";
 import Github from "static/media/GithubLogo.svg";
 import Linkedin from "static/media/LinkedinLogo.svg";
+import Router from "next/router";
 
 const Header = () => {
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const val = inputRef.current?.value;
+    let query: { search?: string } = {};
+
+    if (val?.trim()) query["search"] = val;
+
+    Router.push({ pathname: "/", query: query });
+  };
+
   return (
     <S.Header>
       <S.HeaderContainer>
@@ -18,10 +31,17 @@ const Header = () => {
             </a>
           </Link>
         </S.HeaderLogo>
-        <S.SearchBar>
-          <input type="text" placeholder="Seach HackerNews" />
-          <button>Search</button>
-        </S.SearchBar>
+        <S.SearchForm>
+          <form onSubmit={handleSubmit}>
+            <input
+              type="text"
+              placeholder="Seach HackerNews"
+              ref={inputRef}
+              required
+            />
+            <button type="submit">Search</button>
+          </form>
+        </S.SearchForm>
         <S.UserIcon>
           <a
             href="https://github.com/gupta-piyush19"

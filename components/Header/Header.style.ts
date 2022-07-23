@@ -18,35 +18,38 @@ export const HeaderContainer = styled.div`
 `;
 export const HeaderLogo = styled.div``;
 
-export const SearchBar = styled.div`
+export const SearchForm = styled.div`
   flex-grow: 1;
-  display: flex;
-  align-items: center;
-  border: 1px solid rgb(40, 26, 202);
-  border-radius: 8px;
   height: 34px;
-  overflow: hidden;
   margin-top: -8px;
-  input {
-    flex-grow: 1;
-    border: none;
-    outline: none;
+  form {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgb(40, 26, 202);
+    border-radius: 8px;
+    overflow: hidden;
     height: 100%;
-    padding-left: 14px;
-    font-size: 18px;
-    line-height: 18px;
-    color: rgb(40, 26, 202, 0.8);
-  }
-  button {
-    border: none;
-    outline: none;
-    box-shadow: none;
-    background-color: rgb(40, 26, 202);
-    height: 100%;
-    color: rgb(243, 247, 255);
-    width: 10%;
-    cursor: pointer;
-    font-size: 18px;
+    input {
+      flex-grow: 1;
+      border: none;
+      outline: none;
+      height: 100%;
+      padding-left: 14px;
+      font-size: 18px;
+      line-height: 18px;
+      color: rgb(40, 26, 202, 0.8);
+    }
+    button {
+      border: none;
+      outline: none;
+      box-shadow: none;
+      background-color: rgb(40, 26, 202);
+      height: 100%;
+      color: rgb(243, 247, 255);
+      width: 10%;
+      cursor: pointer;
+      font-size: 18px;
+    }
   }
 `;
 

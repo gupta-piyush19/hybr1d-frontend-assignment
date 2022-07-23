@@ -9,4 +9,8 @@ export const LayoutContainer = styled.div<{ theme: string }>`
 
 export const Content = styled.div`
   flex-grow: 1;
+  > * {
+    max-width: 1200px;
+    margin: 60px auto 0 auto;
+  }
 `;
