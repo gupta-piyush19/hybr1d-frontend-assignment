@@ -1,7 +1,10 @@
-import Comments from "components/Comments";
-import { format, parseISO } from "date-fns";
 import React from "react";
+import Image from "next/image";
+import { format, parseISO } from "date-fns";
 import * as S from "./PostDetail.style";
+
+import Link from "static/media/Link.svg";
+import Comments from "components/Comments";
 
 const PostDetail = (props: { post: IPostDetail }) => {
   const { post } = props;
@@ -11,6 +14,11 @@ const PostDetail = (props: { post: IPostDetail }) => {
       <S.PostDetailContainer>
         <S.PostInfo>
           <div className="title">
+            <div className="post-link" title={post?.url}>
+              <a href={post.url} target="_blank" rel="noopener noreferrer">
+                <Image src={Link} alt="ext link" />
+              </a>
+            </div>
             <p>{post?.title}</p>
           </div>
           <div className="author">

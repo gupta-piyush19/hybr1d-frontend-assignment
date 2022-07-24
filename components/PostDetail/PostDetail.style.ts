@@ -10,11 +10,22 @@ export const PostInfo = styled.div`
   border-bottom: 1px solid #ccc;
 
   .title {
+    display: flex;
+    gap: 6px;
+    .post-link {
+      a {
+        display: flex;
+        align-items: center;
+        margin-top: 12px;
+      }
+    }
     p {
       font-size: 32px;
       font-weight: 600;
+      cursor: default;
     }
   }
+
   .author {
     display: flex;
     align-items: center;

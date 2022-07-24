@@ -19,6 +19,7 @@ const Header = () => {
     if (val?.trim()) query["search"] = val;
 
     Router.push({ pathname: "/", query: query });
+    (inputRef.current as HTMLInputElement).value = "";
   };
 
   return (

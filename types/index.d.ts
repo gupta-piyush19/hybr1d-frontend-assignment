@@ -35,7 +35,7 @@ interface IPost {
   parent_id?: number;
   created_at_i?: number;
   _tags?: string[];
-  ObjectID?: string;
+  objectID?: string;
   _highlightResult?: {
     title?: IHightlightResult;
     url?: IHightlightResult;
