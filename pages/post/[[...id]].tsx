@@ -5,7 +5,7 @@ import PostDetail from "components/PostDetail";
 import Loader from "components/Loader";
 
 const Post = () => {
-  const dataUrl = "http://hn.algolia.com/api/v1/items/";
+  const dataUrl = "https://hn.algolia.com/api/v1/items/";
   const [data, setData] = useState<IPostDetail>();
   const [loading, setLoading] = useState<boolean>(false);
 
